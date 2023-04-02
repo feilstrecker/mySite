@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -51,6 +52,7 @@ body {
         box-shadow: -0.1rem 1rem 2rem -1rem rgb(191, 0, 191);
         position: fixed;
         right: 0;
+        top: 0;
         width: 0;
         height: 100vh;
         transition: ease;
@@ -71,6 +73,47 @@ body {
     .mobile-navbar-li {
         color: white;
         font-size: 1.2rem;
+    }
+
+    .home {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-title {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 2.1rem;
+        margin-left: 2rem;
+        margin-top: 5rem;
+        transition: ease;
+        transition-duration: 1s;
+    }
+    .home-title:hover {
+        color: purple;
+    }
+
+    .p-home {
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 2rem;
+        font-weight: lighter;
+    }
+
+    .p-home-skills {
+        color: #00ff00;
+        font-size: 85%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 2rem auto 0 auto;
+        box-shadow: 0 0 1rem -0.8rem gray;
+        width: 15rem;
+        height: 4rem;
+        text-align: center;
+        padding-top: 0.5rem;
+        border-radius: 0.5rem;
     }
 
 }
