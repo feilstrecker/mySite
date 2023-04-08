@@ -22,202 +22,337 @@ body {
     100% {color: #00ff00}
 }
 
-@media (max-width: 500px) {
+.open-close-mobile-navbar {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.mobile-navbar-bar1, .mobile-navbar-bar2, .mobile-navbar-bar3 {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    background-color: rgb(191, 0, 191);
+    right: 0.5rem;
+    top: 0.5rem;
+    height: 5px;
+    width: 35px;
+    transition: ease;
+    transition-duration: 1s;
+}
+
+.mobile-navbar-bar1 {
+    top: 0.8rem;
+}
+.mobile-navbar-bar2 {
+    top: 1.5rem;
+}
+.mobile-navbar-bar3 {
+    top: 2.2rem;
+}
+
+.mobile-navbar-content {
+    z-index: 1;
+    background-color: black;
+    box-shadow: -0.1rem 1rem 2rem -1rem rgb(191, 0, 191);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    transition: ease;
+    transition-duration: 1s;
+}
+
+.mobile-navbar-ul {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    margin-left: 1rem;
+    box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
+
+}
+
+.mobile-navbar-li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem;    
+    transition: ease;
+    transition-duration: 1s;
+}
+
+.mobile-navbar-li a:hover {
+    background-color: rgb(47, 47, 47);
+    border-radius: 1rem;
+}
+
+.home {
+    background: black;
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 2.1rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    transition: ease;
+    transition-duration: 1s;
+}
+.home-title:hover {
+    color: rgb(191, 0, 191);
+}
+
+.p-home {
+    color: cyan;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2rem;
+    font-weight: lighter;
+    animation: rgb-anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.social-media-container {
+    width: 40%;
+    height: 2rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media-img {
+    width: 20px;
+    height: 20px;
+    transition: ease;
+    transition-duration: 1s;
+}
+
+.social-media-img:hover {
+    width: 25px;
+    height: 25px;
+}
+
+.about {
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgb(47, 47, 47);
+    width: 100%;
+}
+
+h2 {
+    color: white;
+    margin: 2rem;
+    font-size: 30px;
+}
+
+#p-about {
+    background-color: rgb(63, 63, 63);
+    box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
+    padding: 1rem;
+    color: white;
+    margin: 2rem;
+    margin-bottom: 0;
+    font-size: 19px;
+}
+
+.certificates {
+    background-color: rgb(47, 47, 47);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificates-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificate {
+    background-color: rgb(63, 63, 63);
+    box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
+    margin: 0.5rem 0;
+    width: 80vw;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate:hover .certificate-img {
+    background-position: right;
+    opacity: 1;
+    transition: ease;
+    transition-duration: 1s;
+}
+.certificate:hover .p-certificate {
+    font-size: 50%;
+    opacity: 0;
+    transition: ease;
+    transition-duration: 0.8s;
+}
+
+.certificate-img {
+    display: flex;
+    opacity: 0;
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.p-certificate {
+    width: 70%;
+    text-align: center;
+    font-size: 110%;
+    color: #00ff00;
+    font-weight: lighter;
+    position: absolute;
+}
+
+@media (max-width: 399px) {
+    .certificate {
+        height: 12.5rem;
+    }
+    .certificate-img {
+        height: 12.5rem;
+    }
+}
+
+@media (min-width: 399px) and (max-width: 499px) {
+    .certificate {
+        height: 17rem;
+    }
+    .certificate-img {
+        height: 17rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .certificate {
+        height: 20rem;
+    }
+    .certificate-img {
+        height: 20rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+    .certificate {
+        height: 23rem;
+    }
+    .certificate-img {
+        height: 23rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .certificate {
+        height: 30rem;
+    }
+    .certificate-img {
+        height: 30rem;
+    }
+    .p-certificate {
+        font-size: 130%;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+    .certificate {
+        height: 37rem;
+    }
+    .certificate-img {
+        height: 37rem;
+    }
+    .p-certificate {
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 1101px) {
     .open-close-mobile-navbar {
-        z-index: 1;
-        display: flex;
-        position: fixed;
-        right: 0;
-        width: 3rem;
-        height: 3rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mobile-navbar-bar1, .mobile-navbar-bar2, .mobile-navbar-bar3 {
-        z-index: 1;
-        display: flex;
-        position: fixed;
-        background-color: rgb(191, 0, 191);
-        right: 0.5rem;
-        top: 0.5rem;
-        height: 5px;
-        width: 35px;
-        transition: ease;
-        transition-duration: 1s;
-    }
-
-    .mobile-navbar-bar1 {
-        top: 0.8rem;
-    }
-    .mobile-navbar-bar2 {
-        top: 1.5rem;
-    }
-    .mobile-navbar-bar3 {
-        top: 2.2rem;
+        display: none;
     }
 
     .mobile-navbar-content {
-        z-index: 1;
-        background-color: black;
-        box-shadow: -0.1rem 1rem 2rem -1rem rgb(191, 0, 191);
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 0;
-        height: 100vh;
-        transition: ease;
-        transition-duration: 1s;
+        display: flex;
+        right: inherit;
+        background-color: rgb(63, 63, 63);
+        width: 100vw;
     }
 
     .mobile-navbar-ul {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: left;
-        margin-left: 1rem;
-
-    }
-
-    .mobile-navbar-li {
-        color: white;
-        font-size: 1.2rem;
-    }
-
-    .home {
-        background: black;
-        width: 100%;
-        height: 13rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .home-title {
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        font-size: 2.1rem;
-        margin-left: 2rem;
-        margin-top: 3rem;
-        transition: ease;
-        transition-duration: 1s;
-    }
-    .home-title:hover {
-        color: rgb(191, 0, 191);
-    }
-
-    .p-home {
-        color: cyan;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-left: 2rem;
-        font-weight: lighter;
-        animation: rgb-anim;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    }
-
-    .social-media-container {
-        width: 40%;
-        height: 2rem;
-        margin: 1rem auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        position: absolute;
         align-items: center;
-    }
-
-    .social-media-img {
-        width: 20px;
-        height: 20px;
-        transition: ease;
-        transition-duration: 1s;
-    }
-
-    .social-media-img:hover {
-        width: 25px;
-        height: 25px;
-    }
-
-    .about {
-        width: 100%;
-        padding-bottom: 1rem;
-        padding-top: 0.5rem;
-        background-color: rgb(47, 47, 47);
-        width: 100%;
-    }
-
-    h2 {
-        color: white;
-        margin: 2rem;
-        font-size: 30px;
-    }
-
-    #p-about {
+        width: 100vw;
+        height: 3rem;
+        margin: 0;
         background-color: rgb(63, 63, 63);
-        box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
-        padding: 1.5rem;
-        color: white;
-        margin: 1rem;
-        margin-bottom: 0;
-        font-size: 19px;
-    }
-
-    .certificates {
-        background-color: rgb(47, 47, 47);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        justify-content: space-evenly;
+        flex-direction: row;
     }
 
     .certificates-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1rem;
     }
 
     .certificate {
-        background-color: rgb(63, 63, 63);
-        box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
-        margin: 0.5rem 0;
-        width: 90vw;
-        height: 15rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 45vw;
+        height: 25rem;
     }
-
-    .certificate:hover .certificate-img {
-        background-position: right;
-        opacity: 1;
-        transition: ease;
-        transition-duration: 1s;
-    }
-    .certificate:hover .p-certificate {
-        font-size: 50%;
-        opacity: 0;
-        transition: ease;
-        transition-duration: 0.8s;
-    }
-
     .certificate-img {
-        display: flex;
-        opacity: 0;
-        height: 15rem;
-        width: 100%;
-        object-fit: cover;
-        z-index: 0;
+        width: 45vw;
+        height: 25rem;
     }
-
     .p-certificate {
-        width: 70%;
-        text-align: center;
-        font-size: 110%;
-        color: #00ff00;
-        font-weight: lighter;
-        position: absolute;
+        font-size: 150%;
+        width: 30vw;
+    }
+}
+
+@media (min-width: 1450px) and (max-width: 1750px) {
+    .certificate {
+        height: 33rem;
+    }
+    .certificate-img {
+        height: 33rem;
+    }
+    .p-certificate {
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 1750px) and (max-width: 3000px) {
+    .certificate {
+        height: 39rem;
+    }
+    .certificate-img {
+        height: 39rem;
+    }
+    .p-certificate {
+        font-size: 150%;
     }
 }
