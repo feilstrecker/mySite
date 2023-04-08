@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'Montserrat';
 }
 
 ul {
@@ -9,12 +10,22 @@ ul {
 }
 
 body {
-    background: rgb(47, 47, 47);
+    background: black;
+}
+
+@keyframes rgb-anim {
+    0% {color: #00ff00;}
+    15% {color: cyan}
+    40% {color: blueviolet}
+    65% {color: yellow}
+    90% {color: red}
+    100% {color: #00ff00}
 }
 
 @media (max-width: 500px) {
 
     .open-close-mobile-navbar {
+        z-index: 1;
         display: flex;
         position: fixed;
         right: 0;
@@ -26,6 +37,7 @@ body {
     }
 
     .mobile-navbar-bar1, .mobile-navbar-bar2, .mobile-navbar-bar3 {
+        z-index: 1;
         display: flex;
         position: fixed;
         background-color: rgb(191, 0, 191);
@@ -48,6 +60,7 @@ body {
     }
 
     .mobile-navbar-content {
+        z-index: 1;
         background-color: black;
         box-shadow: -0.1rem 1rem 2rem -1rem rgb(191, 0, 191);
         position: fixed;
@@ -76,8 +89,9 @@ body {
     }
 
     .home {
+        background: black;
         width: 100%;
-        height: 100%;
+        height: 13rem;
         display: flex;
         flex-direction: column;
     }
@@ -87,33 +101,123 @@ body {
         color: white;
         font-size: 2.1rem;
         margin-left: 2rem;
-        margin-top: 5rem;
+        margin-top: 3rem;
         transition: ease;
         transition-duration: 1s;
     }
     .home-title:hover {
-        color: purple;
+        color: rgb(191, 0, 191);
     }
 
     .p-home {
-        color: gray;
+        color: cyan;
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 2rem;
         font-weight: lighter;
+        animation: rgb-anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
     }
 
-    .p-home-skills {
-        color: #00ff00;
-        font-size: 85%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        margin: 2rem auto 0 auto;
-        box-shadow: 0 0 1rem -0.8rem gray;
-        width: 15rem;
-        height: 4rem;
-        text-align: center;
+    .social-media-container {
+        width: 40%;
+        height: 2rem;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .social-media-img {
+        width: 20px;
+        height: 20px;
+        transition: ease;
+        transition-duration: 1s;
+    }
+
+    .social-media-img:hover {
+        width: 25px;
+        height: 25px;
+    }
+
+    .about {
+        width: 100%;
+        padding-bottom: 1rem;
         padding-top: 0.5rem;
-        border-radius: 0.5rem;
+        background-color: rgb(47, 47, 47);
+        width: 100%;
     }
 
+    h2 {
+        color: white;
+        margin: 2rem;
+        font-size: 30px;
+    }
+
+    #p-about {
+        background-color: rgb(63, 63, 63);
+        box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
+        padding: 1.5rem;
+        color: white;
+        margin: 1rem;
+        margin-bottom: 0;
+        font-size: 19px;
+    }
+
+    .certificates {
+        background-color: rgb(47, 47, 47);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .certificates-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificate {
+        background-color: rgb(63, 63, 63);
+        box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
+        margin: 0.5rem 0;
+        width: 90vw;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .certificate:hover .certificate-img {
+        background-position: right;
+        opacity: 1;
+        transition: ease;
+        transition-duration: 1s;
+    }
+    .certificate:hover .p-certificate {
+        font-size: 50%;
+        opacity: 0;
+        transition: ease;
+        transition-duration: 0.8s;
+    }
+
+    .certificate-img {
+        display: flex;
+        opacity: 0;
+        height: 15rem;
+        width: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .p-certificate {
+        width: 70%;
+        text-align: center;
+        font-size: 110%;
+        color: #00ff00;
+        font-weight: lighter;
+        position: absolute;
+    }
 }

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Feilstrecker's portfolio</title>
 </head>
 <body>
@@ -17,16 +20,55 @@
         <aside class="mobile-navbar-content">
             <ul class="mobile-navbar-ul">
                 <li class="mobile-navbar-li"><a href="#home">home</a></li>
-                <li class="mobile-navbar-li"><a href="#home">about</a></li>
-                <li class="mobile-navbar-li"><a href="#home">certificates</a></li>
+                <li class="mobile-navbar-li"><a href="#about">about</a></li>
+                <li class="mobile-navbar-li"><a href="#certificates">certificates</a></li>
             </ul>
         </aside>
     </nav>
 
     <section id="home" class="home">
-        <h1 class="home-title">Hi,<br> I'm Leonardo</h1>
+        <h1 class="home-title">Hi,<br> I'm Leonardo.</h1>
         <p class="p-home">Programmer begginer</p>
-        <p class="p-home-skills">Python | Javascript | HTML | CSS | Docker | Kubernetes | Node.js | Typescript </p>
+        <div class="social-media-container">
+            <a href="" class="social-instagram">
+                <img class="social-media-img" src="assets/img/instagram.png" alt="Instagram Logo">
+            </a>
+            <a href="" class="social-linkedin">
+                <img class="social-media-img" src="assets/img/linkedin.png" alt="Linkedin Logo">
+            </a>
+            <a href="" class="social-github">
+                <img class="social-media-img" src="assets/img/github.png" alt="Github Logo">
+            </a>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p id="p-about">
+            Hello, my name is Leonardo and I'm a beginner programmer with experience in various technologies, including Python, JavaScript, Node.js, HTML, CSS, Docker, Kubernetes, and virtualization of machines. With my passion for technology and my willingness to learn, I'm always looking for new ways to improve my skills and expand my knowledge.
+        </p>
+    </section>
+
+    <section class="certificates" id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificates-container">
+            <div class="certificate">
+                <p class="p-certificate">Python</p>
+                <img class="certificate-img" src="assets/img/c1.jpg" alt="Certificado de conclusão">
+            </div>
+            <div class="certificate">
+                <p class="p-certificate">Docker, Kubernetes and Rancher</p>
+                <img class="certificate-img" src="assets/img/c2.jpg" alt="Certificado de conclusão">
+            </div>
+            <div class="certificate">
+                <p class="p-certificate">Data Science</p>
+                <img class="certificate-img" src="assets/img/c3.jpg" alt="Certificado de conclusão">
+            </div>
+            <div class="certificate">
+                <p class="p-certificate">Cloud Computing and Network Essencials</p>
+                <img class="certificate-img" src="assets/img/c4.jpg" alt="Certificado de conclusão">
+            </div>
+        </div>
     </section>
     <script src="assets/js/mobile-navbar-button.js"></script>
 </body>
