@@ -78,7 +78,6 @@ body {
     justify-content: space-around;
     align-items: left;
     margin-left: 1rem;
-    box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
 
 }
 
@@ -130,6 +129,17 @@ body {
 .social-media-container {
     width: 40%;
     height: 2rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-social-media-container {
+    padding-top: 1rem;
+    width: 20%;
+    height: 1rem;
     margin: 1rem auto;
     display: flex;
     flex-direction: row;
@@ -230,6 +240,18 @@ h2 {
     position: absolute;
 }
 
+footer {
+    display: flex;
+    height: 8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+
+
 @media (max-width: 399px) {
     .certificate {
         height: 12.5rem;
@@ -298,8 +320,9 @@ h2 {
     .mobile-navbar-content {
         display: flex;
         right: inherit;
-        background-color: rgb(63, 63, 63);
         width: 100vw;
+        height: 3rem;
+        box-shadow: none;
     }
 
     .mobile-navbar-ul {
@@ -309,11 +332,13 @@ h2 {
         height: 3rem;
         margin: 0;
         background-color: rgb(63, 63, 63);
+        box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
         justify-content: space-evenly;
         flex-direction: row;
     }
 
     .certificates-container {
+        padding-bottom: 1rem;
         flex-direction: row;
         justify-content: center;
         column-gap: 1rem;
@@ -331,6 +356,30 @@ h2 {
         font-size: 150%;
         width: 30vw;
     }
+    .home {
+        padding-top: 3rem;
+        height: 16rem;
+    }
+    .home-title {
+        font-size: 3rem;
+    }
+    .p-home {
+        font-size: 20px;
+    }
+    .social-media-img {
+        width: 25px;
+        height: 25px;
+    }
+    .social-media-img:hover {
+        width: 30px;
+        height: 30px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    #p-about {
+        font-size: 25px;
+    }
 }
 
 @media (min-width: 1450px) and (max-width: 1750px) {
@@ -345,7 +394,7 @@ h2 {
     }
 }
 
-@media (min-width: 1750px) and (max-width: 3000px) {
+@media (min-width: 1750px) {
     .certificate {
         height: 39rem;
     }
