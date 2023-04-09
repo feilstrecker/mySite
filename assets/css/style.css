@@ -253,6 +253,10 @@ footer {
 
 
 @media (max-width: 399px) {
+    .certificates-container {
+        padding-bottom: 0.5rem;
+    }
+
     .certificate {
         height: 12.5rem;
     }
