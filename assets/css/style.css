@@ -175,6 +175,7 @@ h2 {
 
 #p-about {
     background-color: rgb(63, 63, 63);
+    border-radius: 0.5rem;
     box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
     padding: 1rem;
     color: white;
@@ -201,6 +202,7 @@ h2 {
 
 .certificate {
     background-color: rgb(63, 63, 63);
+    border-radius: 0.5rem;
     box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
     margin: 0.5rem 0;
     width: 85vw;
@@ -225,6 +227,7 @@ h2 {
 
 .certificate-img {
     display: flex;
+    border-radius: 0.5rem;
     opacity: 0;
     height: 15rem;
     width: 100%;
