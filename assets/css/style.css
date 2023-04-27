@@ -127,7 +127,7 @@ body {
 }
 
 .social-media-container {
-    width: 40%;
+    width: 30%;
     height: 2rem;
     margin: 1rem auto;
     display: flex;
@@ -182,6 +182,8 @@ h2 {
     margin: 2rem;
     margin-bottom: 0;
     font-size: 19px;
+    transition: ease;
+    transition-duration: 1s;
 }
 
 .certificates {
@@ -259,6 +261,7 @@ h2 {
 .more-button:hover {
     font-size: 110%;
     color: blueviolet;
+    background-color: rgb(26, 26, 26);
 }
 
 footer {
@@ -271,6 +274,9 @@ footer {
     color: white;
 }
 
+footer p {
+    font-size: 80%;
+}
 
 
 @media (max-width: 399px) {
@@ -334,6 +340,15 @@ footer {
 }
 
 @media (min-width: 1101px) {
+    body {
+        background-color: rgb(47, 47, 47);
+    }
+
+    .about, .certificates {
+        width: 70vw;
+        margin: 0 auto;
+    }
+
     .open-close-mobile-navbar {
         display: none;
     }
@@ -354,8 +369,11 @@ footer {
         margin: 0;
         background-color: rgb(63, 63, 63);
         box-shadow: 0rem 0rem 2rem -0.5rem rgb(29, 28, 28);
-        justify-content: space-evenly;
+        justify-content: right;
         flex-direction: row;
+    }
+    .mobile-navbar-li {
+        margin-right: 2rem;
     }
 
     .certificates-container {
